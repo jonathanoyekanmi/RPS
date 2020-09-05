@@ -1,0 +1,47 @@
+   :root {
+   	--modal-duration: 1s; 
+   }
+
+.modal {
+	display: none;
+	z-index: 1;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+	background: whitesmoke;
+	text-align: center;
+	margin: 10% auto;
+	width: 350px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+}
+
+.modal-content h1 {
+	margin-bottom: 1rem;
+	padding-top: 1rem;
+}
+
+.modal-content p {
+	font-size: 1.2rem;
+	margin-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+@keyframes modalopen {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
